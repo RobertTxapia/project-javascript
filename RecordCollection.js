@@ -19,11 +19,11 @@ const recordCollection = {
 };
 
 function updateRecords(records, id, prop, value) {
-  if (prop !== tracks && value !== '') {
+  if (prop !== 'tracks' && value !== '') {
     records[id][prop] = value;
-  } else if (prop === tracks && records.hasOwnProperty(tracks)) {
+  } else if (prop === 'tracks' && records.hasOwnProperty('tracks')) {
     records[id][prop] = [value];
-  } else if (prop === tracks && value !== '') {
+  } else if (prop === 'tracks' && value !== '') {
     records[id][prop].push(value);
   } else if (value === '') {
     delete records[id][prop];
